@@ -8,12 +8,12 @@ pipeline{
         }
         stage('docker image build') {
             steps {
-                sh 'docker image build -t ashokachary/saleor:DEV .'
+                sh 'docker image build -t ashokacharymalloju/saleor:DEV .'
             }
         }
         stage('docker image push to registry') {
             steps {
-                sh 'docker image push ashokachary/saleor:DEV '
+                sh 'docker image push ashokacharymalloju/saleor:DEV'
             }
         }
 }
