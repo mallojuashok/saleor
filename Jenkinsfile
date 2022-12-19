@@ -1,7 +1,10 @@
-pipeline{
+pipeline {
     agent any
+    triggers {
+        pollSCM('* * * * *')
+    }
     stages {
-        stage('GIT') {
+        stage('vcs') {
             steps {
                 git branch: 'main', url: 'https://github.com/mallojuashok/saleor.git'
             }
@@ -11,10 +14,10 @@ pipeline{
                 sh 'docker image build -t ashokacharymalloju/saleor:DEV .'
             }
         }
-        stage('docker image push to registry') {
+        stage('push image to registry') {
             steps {
                 sh 'docker image push ashokacharymalloju/saleor:DEV'
             }
         }
-}
+    }
 }
