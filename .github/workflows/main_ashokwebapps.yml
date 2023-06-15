@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'ashokwebapps'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E734B6D4348A4EFBA908C4066B053EA8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A2395C9D43BA4344AC2A162F7D670B0A }}
